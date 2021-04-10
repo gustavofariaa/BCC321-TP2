@@ -1,10 +1,10 @@
 import * as Styles from './styles'
 
-export default function CardProduct({image}) {
+export default function CardProduct({product}) {
     return (
         <div class="uk-card uk-margin-medium-top">
             <div class="uk-card-media-top">
-                <Styles.CardImage src={image} alt="" />
+                <Styles.CardImage src={product?.imagem} alt="" />
             </div>
             <div class="uk-card-body  uk-card-default">
                 <h3 class="uk-card-title">Media Top</h3>
