@@ -1,10 +1,10 @@
 import { Pool } from 'pg'
 
 export default new Pool({
-  user: 'postgres',
-  host: '34.95.159.206',
-  database: 'lojabcc321',
-  password: 'bd12021',
-  port: 5432,
+  user: process.env.PGUSER,
+  host: process.env.PGHOST,
+  database: process.env.PGDATABASE,
+  password: process.env.PGPASSWORD,
+  port: process.env.PGPORT,
 })
 
