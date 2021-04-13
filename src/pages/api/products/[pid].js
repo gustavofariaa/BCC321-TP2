@@ -25,7 +25,7 @@ export default (req, res) => {
             console.log(pid);
             connectDB.connect(async (error, client, release)=>{
                 const {rows} = await client.query(`
-                UPDATE Peca
+                UPDATE peca
                 SET cor = '${cor}', tamanho = '${tamanho}', imagem = '${imagem}'
                 WHERE codigo = '${pid}';                
                 `)

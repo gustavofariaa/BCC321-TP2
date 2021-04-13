@@ -15,6 +15,7 @@ export default function ModalUpdateProduct({product, setIsModalVisible}) {
         event.preventDefault()
         await api.put(`/products/${product?.codigo}?cor=${color}&tamanho=${size}&imagem=${image}`)
         setIsModalVisible(false)
+        location.reload()
     }
 
     return (
@@ -22,6 +23,7 @@ export default function ModalUpdateProduct({product, setIsModalVisible}) {
             <form>
                 <h2 className="uk-modal-title">Editar produto</h2>
                 <div className="uk-margin">
+                    <label class="uk-form-label"><strong>Cor</strong></label>
                     <input name="cor"
                            className="uk-input uk-margin-small-bottom"
                            type="text"
@@ -30,6 +32,7 @@ export default function ModalUpdateProduct({product, setIsModalVisible}) {
                            placeholder="Cor"
                            required
                     />
+                    <label class="uk-form-label"><strong>Tamanho</strong></label>
                     <input name="tamanho"
                            className="uk-input uk-margin-small-bottom"
                            type="text"
@@ -38,6 +41,7 @@ export default function ModalUpdateProduct({product, setIsModalVisible}) {
                            placeholder="Tamanho"
                            required
                     />
+                    <label class="uk-form-label"><strong>Imagem</strong></label>
                     <input name="imagem"
                            className="uk-input uk-margin-small-bottom"
                            type="text"
