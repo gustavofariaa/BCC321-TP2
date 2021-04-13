@@ -8,7 +8,7 @@ export default function CardProduct({product,setCurrentProduct, setIsModalVisibl
     }
 
     return (
-        <div class="uk-card uk-margin-medium-top">
+        <div class="uk-card uk-margin-medium-top"  uk-scrollspy="target: > div; cls: uk-animation-fade; delay: 200">
             <div class="uk-card-media-top">
                 <Styles.CardImage src={product?.imagem} alt="" />
             </div>
@@ -19,7 +19,7 @@ export default function CardProduct({product,setCurrentProduct, setIsModalVisibl
                     <button className="uk-button uk-button-default" onClick={handleOnClick}>Editar</button>
                 </div>
                 <div className="uk-flex uk-flex-right" uk-grid>
-                    <a className="uk-button uk-button-secondary" href="/product">Ver produto</a>
+                    <a className="uk-button uk-button-secondary" href={`/products/${product?.codigo}`}>Ver produto</a>
                 </div>
             </div>
         </div>
