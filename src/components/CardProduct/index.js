@@ -1,9 +1,9 @@
 import * as Styles from './styles'
 
-export default function CardProduct({product,setCurrentProduct}) {
+export default function CardProduct({product,setCurrentProduct, setIsModalVisible}) {
 
     const handleOnClick = () => {
-        UIkit.modal("#modal-update-product").show();
+        setIsModalVisible(true)
         setCurrentProduct(product)
     }
 
