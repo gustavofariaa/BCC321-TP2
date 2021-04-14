@@ -8,7 +8,7 @@ export default (req, res) => {
         console.log(pid);
         connectDB.connect(async (error, client, release)=>{
             const {rows} = await client.query(`
-            SELECT peca.codigo, cor, tamanho, imagem
+            SELECT peca.codigo, peca.cor, peca.tamanho, peca.imagem, peca.valor_atual, produto.nome, produto.descricao
             FROM peca JOIN produto ON (peca.produto_codigo=produto.codigo)
             WHERE tipo='${pid}'
             `)
