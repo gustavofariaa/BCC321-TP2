@@ -16,7 +16,7 @@ export default function HomePage() {
     return (
         <>
             <NavBar setProducts={setProducts} />
-            <div class="uk-container">
+            <div className="uk-container">
                 <Hero />
                 <CardGrid items={products}/>
             </div>

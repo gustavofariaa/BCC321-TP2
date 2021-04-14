@@ -11,9 +11,7 @@ export default (req, res) => {
             FROM peca JOIN produto ON (peca.produto_codigo=produto.codigo)
             WHERE tipo='${value}'
             `)
-            const obj = rows?.map?.(row => row.tipo)
-            const types = [... new Set(obj)];
-            res.status(200).json(JSON.stringify(types));
+            res.status(200).json(JSON.stringify(rows));
         });
     } catch(err){res.status(500)}  
 }

@@ -7,15 +7,19 @@ export default function HomePage({product}) {
         <>
             <NavBar/>
             {product &&
-            <div className="uk-container uk-flex">
+            <div className="uk-container uk-flex uk-margin-medium-bottom" uk-scrollspy="target: > div; cls: uk-animation-fade; delay: 200">
                 <Styles.Image src={product?.imagem} alt=""/>
                 <Styles.Container>
-                    <p>{product?.composicao}</p>
-                    <p>{product?.cor}</p>
-                    <p>{product?.genero}</p>
-                    <p>{product?.marca}</p>
-                    <p>{product?.tamanho}</p>
-                    <p>{product?.tipo}</p>
+                    <p className="uk-text-large name">{product?.nome}</p>
+                    <p className="uk-text-small">{product?.descricao}</p>
+                    <p className="uk-text-large uk-text-right value">R$ {product?.valor_atual}</p>
+
+                    <p className="info"><strong>Composição</strong>: {product?.composicao}</p>
+                    <p className="info"><strong>Cor</strong>: {product?.cor}</p>
+                    <p className="info"><strong>Gênero</strong>: {product?.genero}</p>
+                    <p className="info"><strong>Marca</strong>: {product?.marca}</p>
+                    <p className="info"><strong>Tamanho</strong>: {product?.tamanho}</p>
+                    <p className="info"><strong>Tipo</strong>: {product?.tipo}</p>
                 </Styles.Container>
             </div>
             }

@@ -35,7 +35,7 @@ export default function ModalUpdateProduct({product, isModalVisible, setIsModalV
             <form>
                 <h2 className="uk-modal-title">Editar produto</h2>
                 <div className="uk-margin">
-                    <label class="uk-form-label"><strong>Nome</strong></label>
+                    <label className="uk-form-label"><strong>Nome</strong></label>
                     <input name="nome"
                            className="uk-input uk-margin-small-bottom"
                            type="text"
@@ -44,7 +44,7 @@ export default function ModalUpdateProduct({product, isModalVisible, setIsModalV
                            placeholder="Nome"
                            required
                     />
-                    <label class="uk-form-label"><strong>Cor</strong></label>
+                    <label className="uk-form-label"><strong>Cor</strong></label>
                     <input name="cor"
                            className="uk-input uk-margin-small-bottom"
                            type="text"
@@ -53,7 +53,7 @@ export default function ModalUpdateProduct({product, isModalVisible, setIsModalV
                            placeholder="Cor"
                            required
                     />
-                    <label class="uk-form-label"><strong>Tamanho</strong></label>
+                    <label className="uk-form-label"><strong>Tamanho</strong></label>
                     <input name="tamanho"
                            className="uk-input uk-margin-small-bottom"
                            type="text"
@@ -62,7 +62,7 @@ export default function ModalUpdateProduct({product, isModalVisible, setIsModalV
                            placeholder="Tamanho"
                            required
                     />
-                    <label class="uk-form-label"><strong>Descrição</strong></label>
+                    <label className="uk-form-label"><strong>Descrição</strong></label>
                     <textarea name="descricao"
                            className="uk-input uk-margin-small-bottom"
                            type="text"
@@ -71,7 +71,7 @@ export default function ModalUpdateProduct({product, isModalVisible, setIsModalV
                            placeholder="Descrição"
                            required
                     />
-                    <label class="uk-form-label"><strong>Valor</strong></label>
+                    <label className="uk-form-label"><strong>Valor</strong></label>
                     <input name="valor_atual"
                            className="uk-input uk-margin-small-bottom"
                            type="number"
@@ -80,7 +80,7 @@ export default function ModalUpdateProduct({product, isModalVisible, setIsModalV
                            placeholder="Valor"
                            required
                     />
-                    <label class="uk-form-label"><strong>Imagem</strong></label>
+                    <label className="uk-form-label"><strong>Imagem</strong></label>
                     <input name="imagem"
                            className="uk-input uk-margin-small-bottom"
                            type="text"

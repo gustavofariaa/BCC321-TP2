@@ -7,7 +7,6 @@ export default (req, res) => {
     if (req.method === 'GET') {
         try {
             const {pid} = req.query;
-            console.log(pid);
             connectDB.connect(async (error, client, release) => {
                 const {rows} = await client.query(`
                 SELECT *
@@ -24,7 +23,6 @@ export default (req, res) => {
     if (req.method === 'PUT') {
         try {
             const {pid, cor, tamanho, imagem, nome, descricao, valor_atual} = req.query;
-            console.log(pid);
             connectDB.connect(async (error, client, release) => {
                 const {rows} = await client.query(`
 
