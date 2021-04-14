@@ -4,13 +4,12 @@ import connectDB from '../../../../../services/connectDB'
 
 export default (req, res) => {  
     try{
-        const {pid} = req.query;
-        console.log(pid);
+        const {value} = req.query;
         connectDB.connect(async (error, client, release)=>{
             const {rows} = await client.query(`
             SELECT peca.codigo, peca.cor, peca.tamanho, peca.imagem, peca.valor_atual, produto.nome, produto.descricao
             FROM peca JOIN produto ON (peca.produto_codigo=produto.codigo)
-            WHERE tipo='${pid}'
+            WHERE genero='${value}'
             `)
             res.status(200).json(JSON.stringify(rows));
         });
