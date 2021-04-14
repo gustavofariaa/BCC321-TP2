@@ -7,7 +7,7 @@ export default function CardGrid({items}) {
     const [isModalVisible, setIsModalVisible] = useState(false)
 
     return (
-        <>
+        <main id="grid-products">
             <div class="uk-grid uk-child-width-1-2@s uk-child-width-1-3@m uk-margin-medium-bottom" uk-grid>
                 {items?.map?.(item => <CardProduct
                     product={item} setCurrentProduct={setCurrentProduct} setIsModalVisible={setIsModalVisible}/>)}
@@ -20,6 +20,6 @@ export default function CardGrid({items}) {
                     setIsModalVisible={setIsModalVisible}
                 />
             )}
-        </>
+        </main>
     );
 }

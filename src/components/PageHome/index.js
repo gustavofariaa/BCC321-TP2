@@ -15,10 +15,10 @@ export default function HomePage() {
     
     return (
         <>
-            <NavBar />
+            <NavBar setProducts={setProducts} />
             <div class="uk-container">
                 <Hero />
-                <CardGrid items = {products}/>
+                <CardGrid items={products}/>
             </div>
         </>
     )
