@@ -13,8 +13,9 @@ export default function CardProduct({product,setCurrentProduct, setIsModalVisibl
                 <Styles.CardImage src={product?.imagem} alt="" />
             </div>
             <div class="uk-card-body  uk-card-default">
-                <h3 class="uk-card-title">Media Top</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+                <h3 class="uk-card-title">{product?.nome}</h3>
+                <p>{product?.valor_atual}</p>
+                <p>{product?.descricao}</p>
                 <div class="uk-flex uk-flex-right uk-margin-small-bottom" uk-grid>
                     <button className="uk-button uk-button-default" onClick={handleOnClick}>Editar</button>
                 </div>
