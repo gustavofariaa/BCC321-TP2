@@ -15,6 +15,14 @@ export const Modal = styled.div`
   & > form {
     background-color: white;
     width: 40%;
+    min-width: 600px;
+    max-height: 90vh;
     padding: 32px;
+    overflow-y: auto;
+
+    & textarea {
+      height: 196px;
+      resize: none;
+    }
   }
 `;

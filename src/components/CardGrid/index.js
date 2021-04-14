@@ -13,7 +13,13 @@ export default function CardGrid({items}) {
                     product={item} setCurrentProduct={setCurrentProduct} setIsModalVisible={setIsModalVisible}/>)}
             </div>
 
-            {isModalVisible && <ModalUpdateProduct product={currentProduct} setIsModalVisible={setIsModalVisible}/>}
+            {isModalVisible && (
+                <ModalUpdateProduct 
+                    product={currentProduct} 
+                    isModalVisible={isModalVisible} 
+                    setIsModalVisible={setIsModalVisible}
+                />
+            )}
         </>
     );
 }

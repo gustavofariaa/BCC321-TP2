@@ -1,9 +1,9 @@
 import api from '../../../services/api'
 
 import * as Styles from './styles'
-import {useState} from "react";
+import {useEffect, useState} from "react";
 
-export default function ModalUpdateProduct({product, setIsModalVisible}) {
+export default function ModalUpdateProduct({product, isModalVisible, setIsModalVisible}) {
     const [nome, setName] = useState(product?.nome)
     const [color, setColor] = useState(product?.cor)
     const [descricao, setDesc] = useState(product?.descricao)
@@ -11,22 +11,31 @@ export default function ModalUpdateProduct({product, setIsModalVisible}) {
     const [size, setSize] = useState(product?.tamanho)
     const [image, setImage] = useState(product?.imagem)
 
+    useEffect(() => {
+        if (isModalVisible) document.documentElement.style.overflow = "hidden";
+        else document.documentElement.style.overflow = "auto";
+    }, [isModalVisible])
 
-    const onCancel = () => setIsModalVisible(false)
+
+    const onCancel = () => {
+        document.documentElement.style.overflow = "auto";
+        setIsModalVisible(false)
+    }
 
     const onClick = async (event) => {
         event.preventDefault()
         await api.put(`/products/${product?.codigo}?cor=${color}&tamanho=${size}&imagem=${image}&nome=${nome}&descricao=${descricao}&valor_atual=${valor_atual}`)
+        document.documentElement.style.overflow = "auto";
         setIsModalVisible(false)
         location.reload()
     }
 
     return (
-        <Styles.Modal>
+        <Styles.Modal id="product-modal">
             <form>
                 <h2 className="uk-modal-title">Editar produto</h2>
                 <div className="uk-margin">
-                <label class="uk-form-label"><strong>Nome</strong></label>
+                    <label class="uk-form-label"><strong>Nome</strong></label>
                     <input name="nome"
                            className="uk-input uk-margin-small-bottom"
                            type="text"

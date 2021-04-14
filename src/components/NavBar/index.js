@@ -1,23 +1,32 @@
+import { useState } from "react";
+
 export default function NavBar() {
+    const [options, setOptions] = useState(null)
+
+    const handleSelect = async (event) => {
+        console.log(event.target.value);
+        setOptions([])
+    }
+
     return (
         <nav class="uk-navbar-container uk-margin-medium-bottom" uk-navbar>
             <div class="uk-container">
                 <div class="uk-navbar-left">
-                    <ul class="uk-navbar-nav">
-                        <li class="uk-active"><a href="/">Store</a></li>
-                        <li><a href="#">Produtos 1</a></li>
-                        <li><a href="#">Produtos 2</a></li>                        
-                    </ul>    
+                    <a class="uk-navbar-item uk-logo" href="/"><strong>Store</strong></a>
                     <div class="uk-navbar-right">
                         <div class="uk-navbar-item">
                             <form action="javascript:void(0)">
-                                <select class="uk-select uk-form-width-small" type="text" placeholder="Input">
-                                    <option value='type'>Tipo</option>
-                                    <option value='genre'>Genero</option>
+                                <select class="uk-select uk-form-width-small" 
+                                    onChange={handleSelect}
+                                    type="text" placeholder="Input">
+                                    <option value='size'>Tamanho</option>
+                                    <option value='gender'>Gênero</option>
                                     <option value='type'>Tipo</option>
                                 </select>
-                                <input class="uk-input uk-form-width-small" type="text" placeholder="Input"/>
-                                <button class="uk-button uk-button-default"><span uk-icon="search" ></span></button>
+                                <select class="uk-select uk-form-width-small" disabled={!options} type="text" placeholder="Input">
+                                    {options?.map?.((option, index) => <option key={index} value={option}>{option}</option>)}
+                                </select>
+                                <button class="uk-button uk-button-secondary">OK</button>
                             </form>
                         </div>
                     </div>              
