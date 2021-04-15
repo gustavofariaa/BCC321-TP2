@@ -1,13 +1,14 @@
+# Trabalho Prático - Banco de Dados I - BCC321
+
 <table>
   <tr>
-    <td align="center"><a href=""><img src="" width="100px;" alt=""/><br /><sub><b></b></sub></a><br /></td>
-    <td align="center"><a href=""><img src="" width="100px;" alt=""/><br /><sub><b></b></sub></a><br /></td>
-    <td align="center"><a href=""><img src="" width="100px;" alt=""/><br /><sub><b></b></sub></a><br /></td>
-    <td align="center"><a href=""><img src="" width="100px;" alt=""/><br /><sub><b></b></sub></a><br /></td>
-    <td align="center"><a href=""><img src="" width="100px;" alt=""/><br /><sub><b></b></sub></a><br /></td>
+    <td align="center"><a href="https://www.linkedin.com/in/ana-cristina-lopes-b69610167/"><img src="https://avatars.githubusercontent.com/u/42918211" width="100px;" alt=""/><br /><sub><b>Ana Cristina</b></sub></a><br /></td>
+    <td align="center"><a href="https://www.linkedin.com/in/gustavo-barbosa-39829819b/"><img src="https://avatars.githubusercontent.com/u/60071133" width="100px;" alt=""/><br /><sub><b>Gustavo Barbosa</b></sub></a><br /></td>
+    <td align="center"><a href="https://www.linkedin.com/in/gustavofariaa/"><img src="https://avatars.githubusercontent.com/u/35354850" width="100px;" alt=""/><br /><sub><b>Gustavo Amorim</b></sub></a><br /></td>
+    <td align="center"><a href="https://www.linkedin.com/in/mateuss-oliveira/"><img src="https://avatars.githubusercontent.com/u/72620226" width="100px;" alt=""/><br /><sub><b>Mateus Oliveira</b></sub></a><br /></td>
+    <td align="center"><a href="https://www.linkedin.com/in/sawtorugo/"><img src="https://avatars.githubusercontent.com/u/82059353" width="100px;" alt=""/><br /><sub><b>Vitor Hugo</b></sub></a><br /></td>
     </tr>
 </table>
-# Trabalho Prático - Banco de Dados I - BCC321
 
 ## Banco de Dados
 Dado um problema fictício de controle interno de uma loja física de venda de roupas, sapatos e acessórios, o grupo implementou um sistema capaz de gerenciar produtos e funcionários, além de manter históricos de compras, estoque e fornecedores. 
