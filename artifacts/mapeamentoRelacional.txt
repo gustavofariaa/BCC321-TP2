@@ -1,0 +1,56 @@
+Peca (Valor_Atual, Cor, Tamanho, Codigo, Produto_Codigo)
+		Peca [Produto_Codigo] → {b,p} Produto [Código]
+
+Produto (Codigo, Genero, Marca, Nome, Descricao, Composicao, Tipo, Grade, Departamento_Nome)
+	Produto [Departamento_Nome] → {b,p} Departamento [Nome]
+
+Departamento (Nome, Telefone)
+
+Pedido (Frete, Data, Codigo, Fornecedor_CNPJ)
+	Pedido [Fornecedor_CNPJ] → {b,p} Fornecedor [CNPJ]
+
+Fornecedor (CNPJ, Email, Nome, Tipo de Produto, Razao_Social, Endereco, Gerente_Funcionario_CPF)
+	Fornecedor [Gerente_Funcionario_CPF] → {b,p} Gerente [Funcionario_CPF]
+
+TelefonesFornecedor (Fornecedor_CNPJ, Telefone)
+	TelefonesFornecedor [Fornecedor_CNPJ] → {p,p} Fornecedor [CNPJ]
+
+
+Compra  (Codigo, Data, Forma de pagamento, Vendedor_Funcionario_CPF, Cliente_Identificacao, Cupom_Nome )
+	Compra [Vendedor_Funcionario_CPF] → {b,p} Vendedor [Funcionario_CPF]
+	Compra [Cliente_Identificacao] → {b,p} Cliente [Identificacao]
+	Compra [Cupom_Nome] → {b,p} Cupom [Nome]
+
+Cupom (Nome, Tipo_Desconto, Limite_Usuarios, Data_Validade, Valor)
+
+Cliente (Identificacao)
+
+Empresa (CNPJ, Endereco, Razao_Social, Telefone, E-mail, Cliente_Identificacao)
+	Empresa [Cliente_Identificacao] → {p,p} Cliente [Identificacao]
+
+Pessoa (CPF, Nome, Telefones, Email, Cidade, CEP, Bairro, Numero, Rua, Cliente_Identificacao)
+ 	Pessoa [Cliente_Identificacao] → {p,p} Cliente [Identificacao]
+
+TelefonesPessoa (Pessoa_CPF, Telefone)
+	TelefonesPesso [Pessoa_CPF] → {p,p} Pessoa [CPF]
+
+Funcionario (CPF, Nome, Endereco, Salario, Data_Nascimento, Telefone, RG, Email, NIS)
+
+Gerente (Grau_Escolaridade, Funcionario_CPF)
+	Gerente[Funcionario_CPF] → {p,p} Funcionario [CPF]
+
+GerenteDepartamento (Funcionario_CPF, Data_Inicio, Data_Termino, Quantidade, Departamento_Nome)
+	GerenteDepartamento[Funcionario_CPF] → {p,p} Funcionario [CPF]
+	GerenteDepartamento[Departamento Nome] → {b,p} Departamento [Nome]
+
+Vendedor (Comissao, Funcionario_CPF, Departamento_Nome)
+	Vendedor [Funcionario_CPF] → {p,p} Funcionario [CPF]
+	Vendedor [Departamento_Nome] → {b,p} Departamento [Nome]
+
+PecasPedidas (Peça_Codigo, Pedido_Codigo, Quantidade, Valor_de_Custo)
+	PeçasPedidas [Peça_Codigo] → {b,p} Peça [Codigo]
+	PeçasPedidas [Pedido_Codigo] → {b,p} Pedido [Codigo]
+
+PecasCompradas (Peca_Código, Compra_Código, Quantidade, Valor_de_Venda)
+	PecasCompradas [Peca_Codigo] → {b,p} Peca [Codigo]
+	PecasCompradas [Compra_Codigo] → {b,p} Compra [Codigo]
