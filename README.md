@@ -71,7 +71,7 @@ Para administrar o banco de dados foi utilizado o [DBeaver](https://dbeaver.io/)
 
   ![](.github/img9.png)
   
-- Preencher campos Host, Posrt, Database, Username e Password
+- Preencher campos Host, Post, Database, Username e Password
 
   ![](.github/img10.png)
 
