@@ -114,5 +114,5 @@ A API Rest utiliza o protocolo de comunicação HTTP utilizando os métodos GET,
     ```
 
 ## Artefatos
-- [Mapeamento ERE para Relacional](.artifacts/mapeamentoRelacional.txt)
-- [Script SQL](.artifacts/script.sql)
+- [Mapeamento ERE para Relacional](https://github.com/gustavofariaa/BCC321-TP2/blob/main/artifacts/mapeamentoRelacional.txt)
+- [Script SQL](https://github.com/gustavofariaa/BCC321-TP2/blob/main/artifacts/script.sql)
