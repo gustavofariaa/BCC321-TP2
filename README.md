@@ -67,9 +67,13 @@ A fim de deixar o banco de dados disponível de forma remota, ele foi implantado
 
 Para administrar o banco de dados foi utilizado o [DBeaver](https://dbeaver.io/) que é um aplicativo de software cliente SQL.
 
-![](.github/img9.png)
+- Selecionar PostgreSQL
 
-![](.github/img10.png)
+  ![](.github/img9.png)
+  
+- Preencher campos Host, Posrt, Database, Username e Password
+
+  ![](.github/img10.png)
 
 ### Execução do Script SQL
 
