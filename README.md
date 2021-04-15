@@ -30,21 +30,49 @@ A partir do Esquema Lógico foi possível codificar o script SQL, respeitando as
 A fim de deixar o banco de dados disponível de forma remota, ele foi implantado na plataforma Google Cloud.
 
 ### Criação de uma instância de VM
-![](.github/img1.png)
-![](.github/img2.png)
-![](.github/img3.png)
-![](.github/img4.png)
-![](.github/img5.png)
-![](.github/img6.png)
-![](.github/img7.png)
-![](.github/img8.png)
+
+- Selecionar SQL
+
+  ![](.github/img1.png)
+
+- Criar instância do Google Cloud SQL
+
+  ![](.github/img2.png)
+  
+- Escolher o PostgreSQL
+
+  ![](.github/img3.png)
+  
+- Definir configurações da instância
+
+  ![](.github/img4.png)
+  
+- Visualizar o status da instância e algumas informações
+
+  ![](.github/img5.png)
+  
+- Criar e nomear um banco de dados
+  
+  ![](.github/img6.png)
+  
+- Criar usuários
+
+  ![](.github/img7.png)
+  
+- Configurar autorização de rede
+
+  ![](.github/img8.png)
 
 ### Conexão com Banco de Dados Remoto
+
 Para administrar o banco de dados foi utilizado o [DBeaver](https://dbeaver.io/) que é um aplicativo de software cliente SQL.
+
 ![](.github/img9.png)
+
 ![](.github/img10.png)
 
 ### Execução do Script SQL
+
 ![](.github/img11.png)
 
 ## Implementação do Sistema
@@ -56,33 +84,30 @@ A implementação do sistema web utilizou as seguintes tecnologias:
 
 ### Criação da API Rest
 A API Rest utiliza o protocolo de comunicação HTTP utilizando os métodos GET, POST, PUT e DELETE. Em nosso sistema utilizaremos os métodos nas seguintes rotas:
-- Retornar todos os produtos
+- [Retornar todos os produtos](https://github.com/gustavofariaa/BCC321-TP2/blob/main/src/pages/api/products/index.js)
     ```
     GET api/products
     ```
-- Retornar um produto específico
+- [Retornar um produto específico](https://github.com/gustavofariaa/BCC321-TP2/blob/main/src/pages/api/products/%5Bpid%5D.js)
     ```
     GET api/products/:id
     ```
-- Editar um produto específico
+- [Editar um produto específico](https://github.com/gustavofariaa/BCC321-TP2/blob/main/src/pages/api/products/%5Bpid%5D.js)
     ```
     PUT api/products/:id
     ```
-- Retornar todos os produtos de um determinado gênero
+- [Retornar todos os produtos de um determinado gênero](https://github.com/gustavofariaa/BCC321-TP2/blob/main/src/pages/api/products/filters/gender/%5Bvalue%5D.js)
     ```
     GET api/products/filters/gender/:value
     ```
-- Retornar todos os produtos de um determinado tamanho
+- [Retornar todos os produtos de um determinado tamanho](https://github.com/gustavofariaa/BCC321-TP2/blob/main/src/pages/api/products/filters/size/%5Bvalue%5D.js)
     ```
     GET api/products/filters/size/:value
     ```
-- Retornar todos os produtos de um determinado tipo
+- [Retornar todos os produtos de um determinado tipo](https://github.com/gustavofariaa/BCC321-TP2/blob/main/src/pages/api/products/filters/type/%5Bvalue%5D.js)
     ```
     GET api/products/filters/type/:value
     ```
-
-### Deploy do Sistema
-
 
 ## Artefatos
 - [Mapeamento ERE para Relacional](.artifacts/mapeamentoRelacional.txt)
